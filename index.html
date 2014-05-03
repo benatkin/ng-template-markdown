@@ -2,19 +2,19 @@
 <html ng-app="template-markdown" lang="en">
   <head>
     <title>ng-template-markdown</title>
-    <link rel="stylesheet" type="text/css" href="/template-markdown.css" />
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/template-markdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="./template-markdown.css" />
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./template-markdown.js"></script>
   </head>
   <body ng-controller="TemplateMarkdownCtrl">
     <textarea ng-model="text"></textarea>
     <div class="preview-container">
       <div class="preview">
-        <h1 ng-repeat-start="block in blocks" ng-if="block.type == 'h1'" ng-init='spans = block.spans' ng-include="'/inside-block.html'"></h1>
-        <h2 ng-if="block.type == 'h2'" ng-init='spans = block.spans' ng-include="'/inside-block.html'"></h2>
-        <p ng-if="block.type == 'para'" ng-init='spans = block.spans' ng-include="'/inside-block.html'"></p>
+        <h1 ng-repeat-start="block in blocks" ng-if="block.type == 'h1'" ng-init='spans = block.spans' ng-include="'./inside-block.html'"></h1>
+        <h2 ng-if="block.type == 'h2'" ng-init='spans = block.spans' ng-include="'./inside-block.html'"></h2>
+        <p ng-if="block.type == 'para'" ng-init='spans = block.spans' ng-include="'./inside-block.html'"></p>
         <ul ng-if="block.type == 'list'">
-          <li ng-repeat="item in block.items" ng-init='spans = item.spans' ng-include="'/inside-block.html'"></li>
+          <li ng-repeat="item in block.items" ng-init='spans = item.spans' ng-include="'./inside-block.html'"></li>
         </ul>
         <hr ng-repeat-end ng-if="block.type == 'hr'">
       </div>
