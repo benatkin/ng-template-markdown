@@ -1,0 +1,17 @@
+textarea, .preview {
+  position: absolute;
+  width: 47%;
+}
+
+textarea {
+  left: 5px;
+  top: 5px;
+  bottom: 30px;
+}
+
+.preview {
+  right: 10px;
+  top: 5px;
+  bottom: 30px;
+  overflow-y: scroll;
+}

@@ -1,0 +1,4 @@
+<span ng-repeat-start="span in spans" ng-if="span.type == 'normal'">{{ span.text }}</span>
+<strong ng-if="span.type == 'bold'">{{ span.text }}</strong>
+<em ng-if="span.type == 'italic'">{{ span.text }}</em>
+<a ng-repeat-end ng-if="span.type == 'link'" ng-href="{{ span.href }}">{{ span.text }}</a>
