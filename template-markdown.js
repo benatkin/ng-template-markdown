@@ -96,7 +96,7 @@ app.controller('TemplateMarkdownCtrl', function($scope, $http, parseMarkdown) {
     $scope.blocks = parseMarkdown(newValue);
   });
 
-  $http.get('/example.md').success(function(data) {
+  $http.get('./example.md').success(function(data) {
     $scope.text = data;
   });
 });
